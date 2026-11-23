@@ -6,6 +6,10 @@
 
 El análisis usa información de 2025 como referencia para orientar la decisión. Compara cinco concesionarios en las 19 localidades incluidas en el análisis urbano.
 
+## Tablero interactivo
+
+[Consultar el tablero del servicio de aseo en Bogotá en Streamlit](https://proyecto-aseo-bogota.streamlit.app/)
+
 ## Instalación y ejecución
 
 El análisis se ejecutó con Python 3.14.7. Desde la raíz del repositorio, crea un entorno virtual e instala las dependencias. En Windows PowerShell:
