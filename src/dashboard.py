@@ -130,7 +130,9 @@ with derecha:
 
 # Hallazgo 1
 st.markdown(
-    "**Hallazgo:** Aunque Lime registra la mayor cantidad absoluta de PQRS, Bogotá Limpia presenta la mayor tasa relativa, con 36,26 PQRS por cada 1.000 habitantes."
+    "**Hallazgo:** Aunque Lime registra la mayor cantidad absoluta de PQRS, Bogotá Limpia presenta la mayor tasa relativa, "
+    "con 36,26 PQRS por cada 1.000 habitantes, aproximadamente un 33,3% superior a la de Lime. Esto evidencia que considerar únicamente las cantidades "
+    "absolutas podría conducir a una priorización diferente, posicionando a Bogotá Limpia como un primer candidato para el plan piloto."
 )
 # Mencionamos explicitamente que los hallazgos son estaticos y no cambian con los filtros.
 st.caption(":red[**Los hallazgos corresponden al análisis general de los cinco concesionarios. El filtro permite explorar los datos individualmente.**]")
@@ -190,7 +192,10 @@ with derecha:
 
 # Hallazgo 2
 st.markdown(
-    "**Hallazgo:** Lime registra la mayor cantidad de puntos considerados activos (177). Sin embargo, Bogotá Limpia presenta la mayor tasa relativa, con 0,076 puntos por cada 1.000 habitantes."
+    "**Hallazgo:** Aunque Lime concentra la mayor cantidad absoluta de puntos considerados activos (177), Bogotá Limpia presenta "
+    "nuevamente la mayor tasa relativa (0,076), seguida de Ciudad Limpia (0,071) y Lime (0,069). Este resultado refuerza su candidatura "
+    "para el plan piloto. Sin embargo, la cercanía entre estas tasas hace necesario considerar conjuntamente las PQRS y la capacidad de "
+    "contenerización antes de establecer una prioridad."
 )
 st.divider()
 
@@ -243,7 +248,10 @@ with derecha:
 
 # Hallazgo 3
 st.markdown(
-    "**Hallazgo:** Bogotá Limpia presenta la mayor capacidad relativa de contenerización (2.790,49 litros por cada 1.000 habitantes), a pesar de liderar las tasas de PQRS y puntos activos. La capacidad registrada no explica por sí sola la problemática."
+    "**Hallazgo:** Bogotá Limpia presenta la mayor capacidad relativa de contenerización (2.790,49 litros por cada 1.000 habitantes), "
+    "aproximadamente tres veces la de Lime, pese a registrar las mayores tasas de PQRS y puntos considerados activos. Este resultado contradice parcialmente "
+    "la hipótesis inicial y sugiere que la capacidad registrada no explica por sí sola el comportamiento de los demás indicadores, por lo que sería necesario "
+    "investigar otros factores, como la distribución, utilización y gestión operativa de los contenedores."
 )
 st.divider()
 
@@ -279,8 +287,11 @@ st.plotly_chart(fig_estados, use_container_width=True)
 
 # Hallazgo 4
 st.markdown(
-    "**Hallazgo:** Bogotá Limpia presenta la mayor tasa total de puntos críticos registrados (0,216 por cada 1.000 habitantes). PromoAmbiental no registra puntos considerados activos, pero sí puntos en otros estados."
-)
+    "**Hallazgo:** Al considerar todos los estados de los puntos críticos, Bogotá Limpia presenta la mayor tasa total de registros (0,216 por cada 1.000 habitantes), "
+    "aproximadamente 2,45 veces la de Lime. A diferencia del análisis de puntos activos, aquí se observa una brecha más marcada entre Bogotá Limpia y los demás concesionarios. "
+    "Por otra parte, las diferencias en los estados registrados y la ausencia de información en algunos registros representan una limitación para la comparación de los puntos "
+    "considerados activos."
+    )
 st.divider()
 
 
@@ -311,16 +322,22 @@ st.plotly_chart(fig_mensual, use_container_width=True)
 
 # Hallazgo 5
 st.markdown(
-    "**Hallazgo:** Bogotá Limpia presenta la mayor tasa mensual de PQRS en 10 de los 12 meses de 2025, con picos en marzo y septiembre. Esto indica que las tasas elevadas no se limitan a un único mes."
-)
+    "**Hallazgo:** Bogotá Limpia presenta la mayor tasa mensual de PQRS en 10 de los 12 meses de 2025, alcanzando picos de 5,23 y 4,87 PQRS por" 
+    "cada 1.000 habitantes en marzo y septiembre, respectivamente. Esto indica que su elevada tasa anual no corresponde exclusivamente a un episodio aislado, " 
+    "sino a un comportamiento recurrente durante el periodo analizado, lo que refuerza su priorización para el plan piloto."
+    )
 st.divider()
-
-st.caption("La disminución de diciembre podría corresponder a una cobertura incompleta del periodo, no se ha confirmado su causa.")
 
 
 # Decisión final y notas metodológicas
 st.subheader("Decisión sugerida para 2027")
-st.write("**Análisis general de los cinco concesionarios:** ....Pendiente...")
+st.write("""**Análisis general de los cinco concesionarios:**
+            A partir del análisis conjunto de los indicadores, se propone priorizar a Bogotá Limpia para la implementación del plan piloto de mejora durante 2027, 
+            dado que presenta las mayores tasas de PQRS, puntos críticos considerados activos y puntos críticos registrados en relación con la población atendida. Además, 
+            sus elevadas tasas de PQRS constituyen un comportamiento recurrente durante 2025. Sin embargo, este concesionario también presenta la mayor 
+            capacidad relativa de contenerización, lo que sugiere que la problemática no puede explicarse únicamente a partir de la disponibilidad de infraestructura. 
+            Por lo tanto, se recomienda investigar las condiciones operativas del servicio antes de definir las intervenciones del plan piloto.
+         """)
 
 # Agregamos la tabla que resulto de todo el análisis para quien desee consultarla
 with st.expander("Detalle por localidad"):
