@@ -62,7 +62,6 @@ else:
 
 # KPIs y sidebar
 st.subheader("Panorama de la selección")
-st.caption("El naranja destaca el mayor valor de cada comparación.")
 a, b, c = st.columns(3)
 a.metric("Población", formato(filtrado["POBLACION"].sum()), border=True)
 b.metric("PQRS (2025)", formato(filtrado["NUM_PQRS"].sum()), border=True)
@@ -72,11 +71,10 @@ d.metric("Puntos considerados activos", formato(filtrado["NUM_PUNTOS_CRITICOS"].
 e.metric("Capacidad (L)", formato(filtrado["CAPACIDAD_TOTAL_CONTENEDORES"].sum()), border=True)
 st.divider()
 
-# Mencionamos explicitamente que los hallazgos son estaticos y no cambian con los filtros.
-st.caption(":red[**Los hallazgos corresponden al análisis general de los cinco concesionarios. El filtro permite explorar los datos individualmente.**]")
 
 # Gráficas PQRS
 st.subheader("1. PQRS registradas durante 2025") #Añadimos un subtitulo para introducir de que vamos a hablar
+st.caption("El naranja destaca el mayor valor de cada comparación.")
 izquierda, derecha = st.columns(2) #Creamos dos espacio iguales para poner las graficas lado a lado
 with izquierda:
     # Ordenamos los concesionarios de mayor a menor.
@@ -134,6 +132,8 @@ with derecha:
 st.markdown(
     "**Hallazgo:** Aunque Lime registra la mayor cantidad absoluta de PQRS, Bogotá Limpia presenta la mayor tasa relativa, con 36,26 PQRS por cada 1.000 habitantes."
 )
+# Mencionamos explicitamente que los hallazgos son estaticos y no cambian con los filtros.
+st.caption(":red[**Los hallazgos corresponden al análisis general de los cinco concesionarios. El filtro permite explorar los datos individualmente.**]")
 st.divider()
 
 
