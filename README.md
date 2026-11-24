@@ -2,7 +2,8 @@
 
 ## Pregunta de análisis
 
-¿Qué concesionario de aseo de la zona urbana de Bogotá debería priorizarse para una intervención de mejora en 2027, considerando la concentración de puntos críticos de acumulación de residuos, las reclamaciones ciudadanas y la disponibilidad de infraestructura de contenerización en relación con la población atendida?
+¿Qué concesionario de aseo de la zona urbana de Bogotá debería priorizarse para implementar un plan piloto de mejora durante 2027, considerando la cantidad de puntos críticos activos, las PQRS registradas durante 2025 y la capacidad de contenerización disponible en relación con la población atendida?
+
 
 El análisis usa información de 2025 como referencia para orientar la decisión. Compara cinco concesionarios en las 19 localidades incluidas en el análisis urbano.
 
